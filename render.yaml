@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: Mannaby
+    env: node
+    plan: free
+    buildCommand: cd server && pnpm run build
+    startCommand: cd server && pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://hingamax:m90pros%407@cluster0.cy1ftfw.mongodb.net/mary
+        sync: false
+      - key: CLIENT_URL
+        value: https://Mannaby.onrender.com
+      - key: PORT
+        value: 10000
